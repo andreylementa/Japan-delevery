@@ -1,5 +1,5 @@
 import Card from "../UI/Card";
-import MealItem from "./MealItem";
+import MealItem from "./MealItem/MealItem";
 import style from "./mealList.module.css";
 
 const DUMMY_MEALS = [
@@ -38,6 +38,7 @@ const MealList = () => {
       key={meal.id}
       name={meal.name}
       description={meal.description}
+      id={meal.id}
     ></MealItem>
   ));
   return (
