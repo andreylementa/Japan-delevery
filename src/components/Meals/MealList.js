@@ -1,3 +1,4 @@
+import Card from "../UI/Card";
 import MealItem from "./MealItem";
 import style from "./mealList.module.css";
 
@@ -41,7 +42,9 @@ const MealList = () => {
   ));
   return (
     <section className={style.meals}>
-      <ul>{mealList}</ul>
+      <Card>
+        <ul>{mealList}</ul>
+      </Card>
     </section>
   );
 };

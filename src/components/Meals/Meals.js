@@ -6,6 +6,7 @@ const Meals = () => {
   return (
     <React.Fragment>
       <PromoText></PromoText>
+
       <MealList></MealList>
     </React.Fragment>
   );
