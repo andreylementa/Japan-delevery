@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const Backdrop = (props) => {
-  return <div className={styles.backdrop}></div>;
+  return <div className={styles.backdrop} onClick={props.onCloseCart}></div>;
 };
 
 const ModalWindow = (props) => {
@@ -19,7 +19,10 @@ const portalElement = document.getElementById("overlays");
 const Modal = (props) => {
   return (
     <React.Fragment>
-      {ReactDOM.createPortal(<Backdrop></Backdrop>, portalElement)}
+      {ReactDOM.createPortal(
+        <Backdrop onCloseCart={props.onCloseCart}></Backdrop>,
+        portalElement
+      )}
       {ReactDOM.createPortal(
         <ModalWindow>{props.children}</ModalWindow>,
         portalElement
